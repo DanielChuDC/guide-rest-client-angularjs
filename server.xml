@@ -9,7 +9,7 @@
          <Host name="localhost" appBase="${default.context}/webapps/" unpackWARs="true" autoDeploy="true" xmlValidation="false" xmlNamespaceAware="false"></Host>
       </Engine>
    </Service>
-
+</server>
 
 
 
