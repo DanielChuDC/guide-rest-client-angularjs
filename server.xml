@@ -1,11 +1,14 @@
-<server port="-1" shutdown="SHUTDOWN">
+<server description="Sample Liberty server">
 
-   <Service name="Catalina">
+   <featureManager>
+      <feature>jaxrs-2.1</feature>
+      <feature>jsonp-1.1</feature>
+   </featureManager>
 
-      <Connector port="${port.http}" protocol="HTTP/1.1" connectionTimeout="20000" />
-      <Engine name="Catalina" defaultHost="localhost">
+   <variable name="default.http.port" defaultValue="9080" />
+   <variable name="default.https.port" defaultValue="9443" />
 
-         <Host name="localhost" appBase="${default.context}/webapps/" unpackWARs="true" autoDeploy="true" xmlValidation="false" xmlNamespaceAware="false"></Host>
-      </Engine>
-   </Service>
+   <httpEndpoint host="*" httpPort="${default.http.port}" httpsPort="${default.https.port}" id="defaultHttpEndpoint" />
+
+   <webApplication location="guide-rest-client-angularjs.war" contextRoot="/" />
 </server>
