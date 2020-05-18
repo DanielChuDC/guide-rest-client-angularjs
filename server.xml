@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Server port="-1" shutdown="SHUTDOWN">
+<server port="-1" shutdown="SHUTDOWN">
 
    <Service name="Catalina">
 
@@ -9,7 +8,4 @@
          <Host name="localhost" appBase="${default.context}/webapps/" unpackWARs="true" autoDeploy="true" xmlValidation="false" xmlNamespaceAware="false"></Host>
       </Engine>
    </Service>
-
-
-
-
+</server>
